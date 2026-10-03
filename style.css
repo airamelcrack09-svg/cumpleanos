@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+    radial-gradient(circle at 15% 20%, #f3caca 0%, transparent 35%),
+    radial-gradient(circle at 85% 75%, #d9c3b5 0%, transparent 35%),
+    #f5eee6;
+
+    color: #4b3b35;
+
+    font-family: Georgia, serif;
+}
+
+.portada {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    padding: 30px;
+
+    animation: aparecer 1.5s ease;
+
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pequeno-texto {
+    font-size: 16px;
+    margin-bottom: 20px;
+
+    color: #8c7165;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: normal;
+
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 19px;
+
+    max-width: 500px;
+
+    line-height: 1.6;
+
+    color: #725d54;
+
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 14px 38px;
+
+    border: 1px solid #8c7165;
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    color: #4b3b35;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(75, 59, 53, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #8c7165;
+
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 20px rgba(75, 59, 53, 0.15);
+}
+
+
+.decoracion {
+    position: absolute;
+
+    font-size: 35px;
+
+    color: #c99c9c;
+
+    animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.decoracion-1 {
+    top: 20%;
+    left: 20%;
+}
+
+.decoracion-2 {
+    bottom: 20%;
+    right: 20%;
+
+    animation-delay: 1.5s;
+}
+
+@keyframes flotar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+.bienvenida {
+    min-height: 100vh;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    transition: opacity 0.8s ease;
+}
+
+.bienvenida h2 {
+    font-size: 45px;
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.bienvenida p:last-child {
+    max-width: 550px;
+
+    line-height: 1.7;
+
+    font-size: 18px;
+
+    color: #725d54;
+}
+
+.personas {
+    padding: 100px 30px 120px;
+    text-align: center;
+    display: none;
+}
+
+.personas h2 {
+    font-size: 45px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.personas .descripcion {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 18px;
+    color: #725d54;
+}
+
+.polaroid {
+    width: 280px;
+    height: 350px;
+    margin: 70px auto;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.polaroid-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+}
+
+.polaroid-front,
+.polaroid-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #fffaf5;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(75, 59, 53, 0.15);
+}
+
+.polaroid-front {
+    display: flex;
+    flex-direction: column;
+}
+
+.foto {
+    width: 100%;
+    height: 260px;
+    background: #e5d8cf;
+    margin-bottom: 15px;
+}
+
+.polaroid-front h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.polaroid-back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.polaroid-back p {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #725d54;
+    padding: 20px;
+}
+
+.polaroid.izquierda {
+    transform: rotate(-5deg);
+    margin-left: 15%;
+}
+
+.polaroid.derecha {
+    transform: rotate(5deg);
+    margin-right: 15%;
+}
