@@ -313,6 +313,17 @@ button:hover {
     margin-right: 15%;
 }
 
+.polaroid.papi {
+    transform: rotate(-5deg);
+    margin-left: 15%;
+}
+
+.polaroid.valentina {
+    transform: rotate(5deg);
+    margin-right: 10%;
+}
+
+
 .decoracion-personas {
     display: flex;
     justify-content: center;
